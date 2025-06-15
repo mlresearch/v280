@@ -1,0 +1,512 @@
+@Proceedings{CPAL2025,
+	booktitle = {Conference on Parsimony and Learning},
+	name = {Conference on Parsimony and Learning},
+	shortname = {CPAL},
+	editor = {Chen, Beidi and Liu, Shijia  and Pilanci, Mert and Su, Weijie and Sulam, Jeremias and Wang, Yuxiang  and Zhu, Zhihui},
+	volume = {280},
+	year = {2025},
+	start = {2025-03-24},
+	end = {2025-03-27},
+	published = {2025-06-15},
+	conference_url = {https://cpal.cc},
+	address = {Stanford University, USA},
+}
+
+@InProceedings{liu25a,
+	title = {Approximate Nullspace Augmented Finetuning for Robust Vision Transformers},
+	author = {Liu, Haoyang and Singh, Aditya and Li, Yijiang and Wang, Haohan},
+	pages = {1-23},
+	openreview = {zH3Zwx3dLQ},
+	abstract = {Enhancing the robustness of deep learning models, particularly in the realm of vision transformers (ViTs), is crucial for their real-world deployment. In this work, we provide a finetuning approach to enhance the robustness of vision transformers inspired by the concept of nullspace from linear algebra. Our investigation centers on whether a vision transformer can exhibit resilience to input variations akin to the nullspace property in linear mappings, implying that perturbations sampled from this nullspace do not influence the model's output when added to the input. We start from the observation that many existing ViTs satisfy this property because a non-trivial nullspace exists in their patch embedding layers. Secondly, as nullspace is a concept associated with linear algebra, we demonstrate that it is possible to synthesize approximate nullspace elements for the non-linear blocks of ViTs employing an optimisation strategy. Finally, we propose a fine-tuning strategy for ViTs wherein we augment the training data with synthesized approximate nullspace noise. After finetuning, we find that the model demonstrates robustness to adversarial and natural image perbutations alike.}
+}
+
+@InProceedings{li25a,
+	title = {Fast John Ellipsoid Computation with Differential Privacy Optimization},
+	author = {Li, Xiaoyu and Liang, Yingyu and Shi, Zhenmei and Song, Zhao and Yu, Junwei},
+	pages = {24-64},
+	openreview = {yfmFSc5ZPG},
+	abstract = {Determining the John ellipsoid - the largest volume ellipsoid contained within a convex polytope - is a fundamental problem with applications in machine learning, optimization, and data analytics. Recent work has developed fast algorithms for approximating the John ellipsoid using sketching and leverage score sampling techniques. However, these algorithms do not provide privacy guarantees for sensitive input data. In this paper, we present the first differentially private algorithm for fast John ellipsoid computation. Our method integrates noise perturbation with sketching and leverages score sampling to achieve both efficiency and privacy. We prove that (1) our algorithm provides $(\epsilon,\delta)$-differential privacy and the privacy guarantee holds for neighboring datasets that are $\epsilon_0$-close, allowing flexibility in the privacy definition; (2) our algorithm still converges to a $(1+\xi)$-approximation of the optimal John ellipsoid in $\Theta(\xi^{-2}(\log(n/\delta_0) + (L\epsilon_0)^{-2}))$ iterations where $n$ is the number of data point, $L$ is the Lipschitz constant, $\delta_0$ is the failure probability, and $\epsilon_0$ is the closeness of neighboring input datasets. Our theoretical analysis demonstrates the algorithm's convergence and privacy properties, providing a robust approach for balancing utility and privacy in John ellipsoid computation. This is the first differentially private algorithm for fast John ellipsoid computation, opening avenues for future research in privacy-preserving optimization techniques.}
+}
+
+@InProceedings{hu25,
+	title = {Large-Scale Multiway Clustering with Seeded Clustering},
+	author = {Hu, Jiaxin},
+	pages = {65-88},
+	openreview = {xfA9mu6NQL},
+	abstract = {Multiway clustering methods for higher-order tensor observations have been developed in various fields, including recommendation systems, neuroimaging, and social networks. However, high computational costs hinder the applications of tensor-based approaches to real-world large-scale data. Here, we propose a large-scale multiway clustering framework under tensor block model, named LS-TBM, with accuracy guarantees. LS-TBM leverages seeded clustering to break down the expensive high-dimensional tensor clustering into two fast low-dimensional steps. Our two-step algorithm substantially reduces the time and space complexities from polynomial to logarithmic rates while maintaining the exact recovery of community structures, under certain signal conditions. We also establish the theoretical phase transition of LS-TBM performance with a key interplay between signal levels and seed sizes. Numerical experiments with synthetic data and real large-scale Uber Pickup data highlight LS-TBM's superior performance in practice.}
+}
+
+@InProceedings{ducotterd25,
+	title = {Learning of Patch-Based Smooth-Plus-Sparse Models for Image Reconstruction},
+	author = {Ducotterd, Stanislas and Neumayer, Sebastian and Unser, Michael},
+	pages = {89-104},
+	openreview = {xJpLu0Dicu},
+	abstract = {We aim at the solution of inverse problems in imaging, by combining a penalized sparse representation of image patches with an unconstrained smooth one. This allows for a straightforward interpretation of the reconstruction.
+We formulate the optimization as a bilevel problem.
+The inner problem deploys classical algorithms while the outer problem optimizes the dictionary and the regularizer parameters through supervised learning.
+The process is carried out via implicit differentiation and gradient-based optimization. 
+We evaluate our method for denoising, super-resolution, and compressed-sensing magnetic-resonance imaging. We compare it to other classical models as well as deep-learning-based methods and show that it always outperforms the former and also the latter in some instances.}
+}
+
+@InProceedings{chen25a,
+	title = {HSR-Enhanced Sparse Attention Acceleration},
+	author = {Chen, Bo and Liang, Yingyu and Sha, Zhizhou and Shi, Zhenmei and Song, Zhao},
+	pages = {105-133},
+	openreview = {wso1gABiPZ},
+	abstract = {Large Language Models (LLMs) have demonstrated remarkable capabilities across various applications, but their performance on long-context tasks is often limited by the computational complexity of attention mechanisms. We introduce a novel approach to accelerate attention computation in LLMs, particularly for long-context scenarios. We leverage the inherent sparsity within attention mechanisms, both in conventional Softmax attention and ReLU attention (with $\mathsf{ReLU}^\alpha$ activation, $\alpha \in \mathbb{N}_+$), to significantly reduce the running time complexity. Our method employs a Half-Space Reporting (HSR) data structure to identify non-zero or ``massively activated'' entries in the attention matrix. We present theoretical analyses for two key scenarios: generation decoding and prompt prefilling. Our approach achieves a running time of $O(mn^{4/5})$ significantly faster than the naive approach $O(mn)$ for generation decoding, where $n$ is the context length, $m$ is the query length, and $d$ is the hidden dimension. We can also reduce the running time for prompt prefilling from $O(mn)$ to $O(mn^{1 - 1 / \lfloor d/2\rfloor} + mn^{4/5})$. Our method introduces only provably negligible error for Softmax attention. This work represents a significant step towards enabling efficient long-context processing in LLMs.}
+}
+
+@InProceedings{guan25,
+	title = {AdaProx: A Novel Method for Bilevel Optimization under Pessimistic Framework},
+	author = {Guan, Ziwei and Sow, Daouda and Lin, Sen and Liang, Yingbin},
+	pages = {134-164},
+	openreview = {wRMu5wPgQ7},
+	abstract = {As a powerful framework for various machine learning problems, bilevel optimization has attracted significant attention recently. While many modern gradient-based algorithms have been devised for optimistic bilevel optimization (OBO), pessimistic bilevel optimization (PBO) is much less explored and there is almost no formally designed algorithms for nonlinear PBO with provable convergence guarantee. To fill this gap, we investigate PBO with nonlinear inner- and outer-level objective functions in this work. By leveraging an existing reformulation of PBO into a single-level constrained optimization problem, we propose an Adaptive Proximal (AdaProx) method which features novel designs of adaptive constraint relaxation and accuracy level in order to guarantee an efficient and provable convergence. We further show that AdaProx converges sublinearly to an $\epsilon$-KKT point, and characterize the corresponding computational complexity. Our experiments on an illustrative example and the robust hyper-representation learning problem validate our algorithmic design and theoretical analysis. To the best of our knowledge, this is the first work that develops principled gradient-based algorithms and characterizes the convergence rate for PBO under nonlinear settings.}
+}
+
+@InProceedings{saini25,
+	title = {A Case Study of Low Ranked Self-Expressive Structures in Neural Network Representations},
+	author = {Saini, Uday Singh and Shiao, William and Sattar, Yahya and Dahiya, Yogesh and Oymak, Samet and Papalexakis, Evangelos E.},
+	pages = {165-236},
+	openreview = {vMGYwMFRKf},
+	abstract = {Understanding neural networks by studying their underlying geometry can help us understand their embedded inductive priors and representation capacity. Prior representation analysis tools like (Linear) Centered Kernel Alignment (CKA) offer a lens to probe those structures via a kernel similarity framework. In this work we approach the problem of understanding the underlying geometry via the lens of subspace clustering, where each input is represented as a linear combination of other inputs. Such structures are called self-expressive structures. In this work we analyze their evolution and gauge their usefulness with the help of linear probes. We also demonstrate a close relationship between subspace clustering and linear CKA and demonstrate its utility to act as a more sensitive similarity measure of representations when compared with linear CKA. We do so by comparing the sensitivities of both measures to changes in representation across their singular value spectrum, by analyzing the evolution of self-expressive structures in networks trained to generalize and memorize and via a comparison of networks trained with different optimization objectives. This analysis helps us ground the utility of subspace clustering based approaches to analyze neural representations and motivate future work on exploring the utility of enforcing similarity between self-expressive structures as a means of training neural networks.}
+}
+
+@InProceedings{wu25,
+	title = {Do Global and Local Perform Cooperatively or Adversarially in Heterogeneous Federated Learning?},
+	author = {Wu, Huiwen and Zhang, Shuo},
+	pages = {237-254},
+	openreview = {qOzt8VNQMx},
+	abstract = {Heterogeneous federated learning (Hetero-FL) is an emerging machine learning framework that enables the training of collaborative models between devices with varying capabilities and data without sharing raw data. In HFL, there are two types of trainer that exhibit distinct behaviors: the Global Trainer (GTr), which prioritizes average performance while lacking fine-grained client insights; the Local Trainer (LTr), which addresses local issues and excels in local data, but struggles with generalization. Thus, it is crucial to combine them, obtaining an admired GTr. Unlike the prevalent personalization strategies that supplement GTr with LTr, our work introduces a novel approach in which GTr and LTr collaborate adversarially. The adversarial performance of the local trainer can unexpectedly enhance the overall performance of GTr in the combined global-local training process. Building on a profound understanding of this adversarial cooperation, we propose an alternating training strategy named Fed A(dversarial) B(ased) (C)ooperation (FedABC), utilizing a "G-L-G-L" framework. LTr increases the global loss, preventing GTr from falling at local minimum points. Our comprehensive experiments show superior accuracy, up to 13.77\%, and faster convergence than existing state-of-the-art Hetero-FL methods. We validate the effectiveness and efficiency of our approach in terms of fairness, generalizability, and long-term behavior. Ultimately, our proposed method underscores the design of the training strategy of the Hetero-FL model, emphasizing adversarial cooperation between GTr and LTr in real-world scenarios.}
+}
+
+@InProceedings{wang25a,
+	title = {Heterogeneous Decision Making in Mixed Traffic: Uncertainty-aware Planning and Bounded Rationality},
+	author = {Wang, Hang and Fang, Qiaoyi and Zhang, Junshan},
+	pages = {255-277},
+	openreview = {pxg38Rw63r},
+	abstract = {The past few years have witnessed a rapid growth of the deployment of automated vehicles (AVs). Clearly, AVs and human-driven vehicles (HVs) will co-exist for many years, and AVs will have to operate around HVs, pedestrians, cyclists, and more, calling for fundamental breakthroughs in AI designed for mixed traffic to achieve mixed autonomy.  Thus motivated, we study heterogeneous decision making by AVs and HVs in a mixed traffic environment, aiming to capture the interactions  between human and machine decision-making and develop an AI foundation that enables vehicles to operate safely and efficiently. There are a number of challenges to achieve mixed autonomy, including 1) humans drivers make driving decisions with bounded rationality, and it remains open to develop accurate models for HVs' decision making; and 2) uncertainty-aware planning plays a critical role for AVs to take safety maneuvers in response to the human behavior. In this paper,  we introduce a formulation of AV-HV interaction, where the HV makes decisions with bounded rationality and the AV employs uncertainty-aware planning based on the prediction on HV's future actions. We conduct a comprehensive analysis on AV and HV's learning regret to answer the questions: 1) *How does the learning performance depend on HV's bounded rationality and AV's planning*; 2) *How do different decision making strategies impact the overall learning performance?*  Our findings reveal some intriguing phenomena, such as Goodhart's Law in AV's learning performance and compounding effects in HV's decision making process. By examining the dynamics of the regrets, we gain insights into the interplay between human and machine decision making.}
+}
+
+@InProceedings{lau25,
+	title = {Adaptive Batch Size Schedules for Distributed Training of Language Models with Data and Model Parallelism},
+	author = {Lau, Tim Tsz-Kit and Li, Weijian and Xu, Chenwei and Liu, Han and Kolar, Mladen},
+	pages = {278-304},
+	openreview = {pi2TiX7er9},
+	abstract = {An appropriate choice of batch sizes in large-scale model training is crucial, yet it involves an intrinsic yet inevitable dilemma: large-batch training improves training efficiency in terms of memory utilization, while generalization performance often deteriorates due to small amounts of gradient noise. Despite this dilemma, the common practice of choosing batch sizes in language model training often prioritizes training efficiency---employing either constant large sizes with data parallelism or implementing batch size warmup schedules. However, such batch size schedule designs remain heuristic and often fail to adapt to training dynamics, presenting the challenge of designing adaptive batch size schedules. Given the abundance of available datasets and the data-hungry nature of language models, data parallelism has become an indispensable distributed training paradigm, enabling the use of larger batch sizes for gradient computation. However, vanilla data parallelism requires replicas of model parameters, gradients, and optimizer states at each worker, which prohibits training larger models with billions of parameters. To optimize memory usage, more advanced parallelism strategies must be employed. In this work, we propose general-purpose and theoretically principled adaptive batch size schedules compatible with data parallelism and model parallelism. We develop a practical implementation with PyTorch Fully Sharded Data Parallel, facilitating the pretraining of language models of different sizes. We empirically demonstrate that our proposed approaches outperform constant batch sizes and heuristic batch size warmup schedules in the pretraining of models in the Llama 2 family, with particular focus on smaller models with up to 3 billion parameters. We also establish theoretical convergence guarantees for such adaptive batch size schedules with Adam for general smooth nonconvex objectives.}
+}
+
+@InProceedings{abuduweili25,
+	title = {Revisiting the Initial Steps in Adaptive Gradient Descent Optimization},
+	author = {Abuduweili, Abulikemu and Liu, Changliu},
+	pages = {305-322},
+	openreview = {pJVxTOUCkw},
+	abstract = {Adaptive gradient optimization methods, such as Adam, are prevalent in training deep neural networks across diverse machine learning tasks due to their ability to achieve faster convergence. However, these methods often suffer from suboptimal generalization compared to stochastic gradient descent (SGD) and exhibit instability, particularly when training Transformer models. 
+In this work, we show the standard initialization of the second-order moment estimation ($v_0 =0$) as a significant factor contributing to these limitations. We introduce simple yet effective solutions: initializing the second-order moment estimation with non-zero values, using either data-driven or random initialization strategies. Empirical evaluations demonstrate that our approach not only stabilizes convergence but also enhances the final performance of adaptive gradient optimizers. Furthermore, by adopting the proposed initialization strategies, Adam achieves performance comparable to many recently proposed variants of adaptive gradient optimization methods.  Our code is available at https://github.com/Walleclipse/Adam_Initialization.}
+}
+
+@InProceedings{ding25,
+	title = {A Validation Approach to Over-parameterized Matrix and Image Recovery},
+	author = {Ding, Lijun and Qin, Zhen and Jiang, Liwei and Zhou, Jinxin and Zhu, Zhihui},
+	pages = {323-350},
+	openreview = {oyQnduevQw},
+	abstract = {This paper studies the problem of recovering a low-rank matrix from several noisy random linear measurements. We consider the setting where the rank of the ground-truth matrix is unknown a priori and use an objective function built from a rank-overspecified factored representation of the matrix variable, where the global optimal solutions overfit and do not correspond to the underlying ground truth.
+We then solve the associated nonconvex problem using gradient descent with small random initialization. We show that as long as the measurement operators satisfy the restricted isometry property (RIP) with its rank parameter scaling with the rank of the ground-truth matrix rather than scaling with the overspecified matrix rank, gradient descent iterations are on a particular trajectory towards the ground-truth matrix and achieve nearly information-theoretically optimal recovery when it is stopped appropriately. We then propose an efficient stopping strategy based on the common hold-out method and show that it detects a nearly optimal estimator provably. Moreover, experiments show that the proposed validation approach can also be efficiently used for image restoration with deep image prior, which over-parameterizes an image with a deep network.}
+}
+
+@InProceedings{liu25b,
+	title = {Dual Reasoning: A GNN-LLM Collaborative Framework for Knowledge Graph Question Answering},
+	author = {Liu, Guangyi and Zhang, Yongqi and Li, Yong and Yao, Quanming},
+	pages = {351-372},
+	openreview = {odnOkx8Qfj},
+	abstract = {Large Language Models (LLMs) excel at intuitive, implicit reasoning. Guiding LLMs to construct thought chains can enhance their deliberate reasoning abilities, but also faces challenges such as hallucination. Knowledge Graphs (KGs) can provide explicit structured knowledge for LLMs to alleviate these issues. However, existing KG-enhanced methods often overlook explicit graph learning, making it challenging to efficiently provide precise reasoning chains for LLMs. Following dual-process theory, we propose Dual-Reasoning (DualR), a novel framework that integrates an external system based on Graph Neural Network (GNN) for explicit reasoning on KGs, complementing the implicit reasoning of LLMs through externalized reasoning chains. DualR designs an LLM-empowered GNN module for explicit learning on KGs, efficiently extracting high-quality reasoning chains. These reasoning chains are then refined to a knowledge-enhanced multiple-choice prompt, guiding a frozen LLM to reason thoughtfully for final answer determination. Extensive experiments on three benchmark KGQA datasets demonstrate that DualR achieves state-of-the-art performance while maintaining high efficiency and interpretability.}
+}
+
+@InProceedings{sapkota25,
+	title = {Dimension Mixer: Group Mixing of Input Dimensions for Efficient Function Approximation},
+	author = {Sapkota, Suman and Bhattarai, Binod},
+	pages = {373-391},
+	openreview = {nJ4fuCF5aX},
+	abstract = {The recent success of multiple neural architectures like CNNs, Transformers, and MLP-Mixers motivates us to look for similarities and differences between them. We find that these architectures can be interpreted through the lens of a general concept of dimension mixing. Research on coupling flows, shufflenet and the butterfly transform shows that partial and hierarchical signal mixing schemes are sufficient for efficient and expressive function approximation. In this work, we study group-wise sparse, non-linear, multi-layered and learnable mixing schemes of inputs and find that they are complementary to many standard neural architectures. Following our observations and drawing inspiration from the Fast Fourier Transform, we generalize Butterfly Structure to use non-linear mixer function allowing for MLP as mixing function called Butterfly MLP. We are also able to sparsely mix along sequence dimension for Transformer-based architectures called Butterfly Attention. Experiments on CIFAR and LRA datasets demonstrate that the proposed Non-Linear Butterfly Mixers are efficient and scale well when the host architectures are used as mixing function. We devise datasets with increasing complexity to solve Pathfinder-X task. Additionally, we propose Patch-Only MLP-Mixer for processing spatial 2D signals demonstrating a different dimension mixing strategy.}
+}
+
+@InProceedings{liao25,
+	title = {Provable Model-Parallel Distributed Principal Component Analysis with Parallel Deflation},
+	author = {Liao, Fangshuo and Su, Wenyi and Kyrillidis, Anastasios},
+	pages = {392-416},
+	openreview = {n3SpSUzGi0},
+	abstract = {We study a distributed Principal Component Analysis (PCA) framework where each worker targets a distinct eigenvector and refines its solution by updating from intermediate solutions provided by peers deemed as "superior". Drawing intuition from the deflation method in centralized eigenvalue problems, our approach breaks the sequential dependency in the deflation steps and allows asynchronous updates of workers, while incurring only a small communication cost. To our knowledge, a gap in the literature -- *the theoretical underpinning of such distributed, dynamic interactions among workers* -- has remained unaddressed. This paper offers a theoretical analysis explaining why, how, and when these intermediate, hierarchical updates lead to practical and provable convergence in distributed environments. 
+Despite being a theoretical work, our prototype implementation demonstrates that such a distributed PCA algorithm converges effectively and in scalable way: through experiments, our proposed framework offers comparable performance to EigenGame-$\mu$, the state-of-the-art model-parallel PCA solver.}
+}
+
+@InProceedings{yang25,
+	title = {Meta ControlNet: Enhancing Task Adaptation via Meta Learning},
+	author = {Yang, Junjie and Zhao, Jinze and Wang, Peihao and Wang, Zhangyang and Liang, Yingbin},
+	pages = {417-432},
+	openreview = {ju63pUpq0N},
+	abstract = {Diffusion-based image synthesis has attracted extensive attention recently. In particular, ControlNet that uses image-based prompts exhibits powerful capability in image tasks such as canny edge detection and generates images well aligned with these prompts. However, vanilla ControlNet generally requires extensive training of around 5000 steps to achieve a desirable control for a single task. Recent context-learning approaches have improved its adaptability, but mainly for edge-based tasks, and rely on paired examples. Thus, two important open issues are yet to be addressed to reach the full potential of ControlNet: (i) zero-shot control for certain tasks and (ii) faster adaptation for non-edge-based tasks. In this paper, we introduce a novel Meta ControlNet method, which adopts the task-agnostic meta learning technique and features a new layer freezing design. Meta ControlNet significantly reduces learning steps to attain control ability from 5000 to 1000. Further, Meta ControlNet exhibits direct zero-shot adaptability in edge-based tasks without any finetuning, and achieves control within only 100 finetuning steps in more complex non-edge tasks such as Human Pose. Our code is publicly available at \url{https://github.com/JunjieYang97/Meta-ControlNet}.}
+}
+
+@InProceedings{wang25b,
+	title = {Concept Bottleneck Model with Zero Performance Loss},
+	author = {Wang, Zhenzhen and Popel, Aleksander and Sulam, Jeremias},
+	pages = {433-461},
+	openreview = {ii2zoKgRJV},
+	abstract = {Interpreting machine learning models with high-level, human-understandable concepts has gained increasing importance. The concept bottleneck model (CBM) is a popular approach for providing such explanations but typically sacrifices some prediction power compared with standard black-box models. In this work, we propose an approach to turn an off-the-shelf black-box model into a CBM without changing its predictions or compromising prediction power. Through an invertible mapping from the model's latent space to a concept space, predictions are decomposed into a linear combination of concepts. This provides concept-based explanations for the complex model and allows us to intervene in its predictions manually. Experiments across benchmarks demonstrate that CBM-zero provides comparable explainability and better accuracy than other CBM methods.}
+}
+
+@InProceedings{tastan25,
+	title = {FedPeWS: Personalized Warmup via Subnetworks for Enhanced Heterogeneous Federated Learning},
+	author = {Tastan, Nurbek and Horv\'{a}th, Samuel and Tak\'{a}\v{c}, Martin and Nandakumar, Karthik},
+	pages = {462-483},
+	openreview = {iYwiyS1YdQ},
+	abstract = {Statistical data heterogeneity is a significant barrier to convergence in federated learning (FL). While prior work has advanced heterogeneous FL through better optimization objectives, these methods fall short when there is *extreme* data heterogeneity among collaborating participants. We hypothesize that convergence under extreme data heterogeneity is primarily hindered due to the aggregation of conflicting updates from the participants in the initial collaboration rounds. To overcome this problem, we propose a warmup phase where each participant learns a personalized mask and updates only a subnetwork of the full model. This *personalized warmup* allows the participants to focus initially on learning specific *subnetworks* tailored to the heterogeneity of their data. After the warmup phase, the participants revert to standard federated optimization, where all parameters are communicated. We empirically demonstrate that the proposed personalized warmup via subnetworks (*FedPeWS*) approach improves accuracy and convergence speed over standard federated optimization methods. The code can be found at https://github.com/tnurbek/fedpews.}
+}
+
+@InProceedings{makni25,
+	title = {A unified framework for Sparse plus Low-Rank Matrix Decomposition for LLMs},
+	author = {Makni, Mehdi and Behdin, Kayhan and Xu, Zheng and Ponomareva, Natalia and Mazumder, Rahul},
+	pages = {484-499},
+	openreview = {hyN75SAJTI},
+	abstract = {The impressive capabilities of large foundation models come at a cost of substantial computing resources to serve them. Compressing these pre-trained models is of practical interest as it can democratize deploying them to the machine learning community at large by lowering the costs associated with inference.
+A promising compression scheme is to decompose foundation models' dense weights into a sum of sparse plus low-rank matrices.
+In this paper, we design a unified framework coined $\texttt{HASSLE-free}$ for (semi-structured) sparse plus low-rank matrix decomposition of foundation models.
+Our framework introduces the local layer-wise reconstruction error objective for this decomposition, we demonstrate that prior work solves a relaxation of this optimization problem; and we provide efficient and scalable methods to minimize the $\textit{exact}$ introduced optimization problem. 
+$\texttt{HASSLE-free}$ substantially outperforms state-of-the-art methods in terms of the introduced objective and a wide range of LLM evaluation benchmarks. For the Llama3-8B model with a 2:4 sparsity component plus a 64-rank component decomposition, a compression scheme for which recent work shows important inference acceleration on GPUs, $\texttt{HASSLE-free}$ reduces the test perplexity by $18$% for the WikiText-2 dataset and reduces the gap (compared to the dense model) of the average of eight popular zero-shot tasks by $28$% compared to existing methods.}
+}
+
+@InProceedings{li25b,
+	title = {Greedy Output Approximation: Towards Efficient Structured Pruning for LLMs Without Retraining},
+	author = {Li, Jianwei and Dong, Yijun and Lei, Qi},
+	pages = {500-520},
+	openreview = {hp7txxx8hv},
+	abstract = {To remove redundant components of large language models (LLMs) without incurring significant pruning costs, this work focuses on single-shot structured pruning without a retraining phase. We simplify the pruning process for Transformer-based LLMs by identifying a depth-2 pruning structure that functions independently. Additionally, we propose two inference-aware pruning criteria derived from the optimization perspective of output approximation, which outperforms traditional training-aware metrics such as gradient and Hessian. We also introduce a two-step reconstruction technique to mitigate pruning errors without model retraining. Experimental results demonstrate that our strategy significantly reduces pruning costs and hardware requirements while maintaining superior performance across various datasets and models.}
+}
+
+@InProceedings{singh25,
+	title = {MoXCo: How I learned to stop exploring and love my local minima?},
+	author = {Singh, Esha and Sabach, Shoham and Wang, Yu-Xiang},
+	pages = {521-544},
+	openreview = {ferFzBa9bM},
+	abstract = {Deep neural networks are well-known for their generalization capabilities, largely attributed to optimizers' ability to find "good" solutions in high-dimensional loss landscapes. This work aims to deepen the understanding of optimization specifically through the lens of loss landscapes. We propose a generalized framework for adaptive optimization that favors convergence to these "good" solutions. Our
+approach shifts the optimization paradigm from merely finding solutions quickly to discovering solutions that generalize well, establishing a careful balance between optimization efficiency and model generalization. We empirically validate our claims using two-layer, fully connected neural network with ReLU activation and demonstrate practical applicability through binary quantization of ResNets. Our numerical results demonstrate that these adaptive optimizers facilitate exploration leading to faster convergence speeds and narrow the generalization gap between stochastic gradient descent and other adaptive methods.}
+}
+
+@InProceedings{daliri25,
+	title = {Unlock the Theory behind Scaling 1-bit Neural Networks},
+	author = {Daliri, Majid and Song, Zhao and Yang, Chiwun},
+	pages = {545-598},
+	openreview = {fcpRnXWvWk},
+	abstract = {Recently, 1-bit Large Language Models (LLMs) have emerged, showcasing an impressive combination of efficiency and performance that rivals traditional LLMs. Research by Wang et al. (2023); Ma et al. (2024) indicates that the performance of these 1-bit LLMs progressively improves as the number of parameters increases, hinting at the potential existence of a *Scaling Law in 1-bit Neural Networks*. This paper presents the **first theoretical result** that rigorously establishes this scaling law for 1-bit models. We prove that, despite the constraint of weights restricted to $\{-1, +1\}$, the dynamics of model training inevitably align with kernel behavior as the network width grows. This theoretical breakthrough guarantees convergence of the 1-bit model to an arbitrarily small loss as width increases. Furthermore, we introduce the concept of the generalization difference, defined as the gap between the outputs of 1-bit networks and their full-precision counterparts, and demonstrate that this difference maintains a negligible level as network width scales. Building on the work of Kaplan et al. (2020), we conclude by examining how the training loss scales as a power-law function of the model size, dataset size, and computational resources utilized for training. Our findings underscore the promising potential of scaling 1-bit neural networks, suggesting that int1 could become the standard in future neural network precision.}
+}
+
+@InProceedings{wen25,
+	title = {Bridging Domain Adaptation and Graph Neural Networks: A Tensor-Based Framework for Effective Label Propagation},
+	author = {Wen, Tao and Chen, Elynn and Chen, Yuzhou and Lei, Qi},
+	pages = {599-614},
+	openreview = {erHR9IqQBQ},
+	abstract = {Graph Neural Networks (GNNs) have recently become the predominant tools for studying graph data. Despite state-of-the-art performance on graph classification tasks, GNNs are overwhelmingly trained in a single domain under supervision, thus necessitating a prohibitively high demand for labels and resulting in poorly transferable representations. 
+To address this challenge, we propose the Label-Propagation Tensor Graph Neural Network (LP-TGNN) framework to bridge the gap between graph data and traditional domain adaptation methods. It extracts graph topological information holistically with a tensor architecture and then reduces domain discrepancy through label propagation. It is readily compatible with general GNNs and domain adaptation techniques with minimal adjustment through pseudo-labeling. Experiments on various real-world benchmarks show that our LP-TGNN outperforms baselines by a notable margin. We also validate and analyze each component of the proposed framework in the ablation study.}
+}
+
+@InProceedings{dorador25,
+	title = {Theoretical and Empirical Advances in Forest Pruning},
+	author = {Dorador, Albert},
+	pages = {615-651},
+	openreview = {eVAjcRE8tx},
+	abstract = {Regression forests have long delivered state-of-the-art accuracy, often outperforming regression trees and even neural networks, but they suffer from limited interpretability as ensemble methods.  In this work, we revisit forest pruning, an approach  that aims to have the best of both worlds: the accuracy of regression forests and the interpretability of regression trees.  This pursuit, whose foundation lies at the core of random forest theory, has seen vast success in empirical studies.  In this paper, we contribute theoretical results that support and qualify those empirical findings; namely, we prove the asymptotic advantage of a Lasso-pruned forest over its unpruned counterpart under weak assumptions, as well as high-probability finite-sample generalization bounds for regression forests pruned according to the main methods, which we then validate by way of simulation. Then, we test the accuracy of pruned regression forests against their unpruned counterparts on 19 different datasets (16 synthetic, 3 real). We find that in the vast majority of scenarios tested, there is at least one forest-pruning method that yields equal or better accuracy than the original full forest (in expectation), while just using a small fraction of the trees. We show that, in some cases, the reduction in the size of the forest is so dramatic that the resulting sub-forest can be meaningfully merged into a single tree, obtaining a level of interpretability  that is qualitatively superior to that of the original regression forest, which remains a black box.}
+}
+
+@InProceedings{plummer25,
+	title = {Asymptotic Behavior of the Coordinate Ascent Variational Inference in Singular Models},
+	author = {Plummer, Sean C and Bhattacharya, Anirban and Pati, Debdeep and Yang, Yun},
+	pages = {652-674},
+	openreview = {e9Isd3GFDb},
+	abstract = {Mean-field approximations are widely used for efficiently approximating high-dimensional integrals. While the efficacy of such approximations is well understood for well-behaved likelihoods, it is not clear how accurately it can approximate the marginal likelihood associated with a highly non log-concave singular model. In this article, we provide a case study of the convergence behavior of coordinate ascent variational inference (CAVI) in the context of a general $d$-dimensional singular model in standard form. We prove that for a general $d$-dimensional singular model in standard form with real log canonical threshold (RLCT) $\lambda$ and multiplicity $m$, the CAVI system converges to one of $m$ locally attracting fixed points. Furthermore, at each of these fixed points, the evidence lower bound (ELBO) of the system recovers the leading-order behavior of the asymptotic expansion of the log marginal likelihood predicted by \citet{watanabe1999algebraic, watanabe2001algebraic, watanabe2001balgebraic}. Our empirical results demonstrate that for models with multiplicity $m=1$ the ELBO provides a tighter approximation to the log-marginal likelihood than the asymptotic approximation $-\lambda \log n + o( \log \log n)$ of \citet{watanabe1999algebraic}.}
+}
+
+@InProceedings{ke25,
+	title = {Curse of Attention: A Kernel-Based Perspective for Why Transformers Fail to Generalize on Time Series Forecasting and Beyond},
+	author = {Ke, Yekun and Liang, Yingyu and Shi, Zhenmei and Song, Zhao and Yang, Chiwun},
+	pages = {675-738},
+	openreview = {bdOmItHgU5},
+	abstract = {The application of transformer-based models on time series forecasting (TSF) tasks has long been popular to study. However, many of these works fail to beat the simple linear residual model, and the theoretical understanding of this issue is still limited. In this work, we propose the first theoretical explanation of the inefficiency of transformers on TSF tasks. We attribute the mechanism behind it to {\bf Asymmetric Learning} in training attention networks. When the sign of the previous step is inconsistent with the sign of the current step in the next-step-prediction time series, attention fails to learn the residual features. This makes it difficult to generalize on out-of-distribution (OOD) data, especially on the sign-inconsistent next-step-prediction data, with the same representation pattern, whereas a linear residual network could easily accomplish it. We hope our theoretical insights provide important necessary conditions for designing the expressive and efficient transformer-based architecture for practitioners.}
+}
+
+@InProceedings{chen25b,
+	title = {The Computational Limits of State-Space Models and Mamba via the Lens of Circuit Complexity},
+	author = {Chen, Yifang and Li, Xiaoyu and Liang, Yingyu and Shi, Zhenmei and Song, Zhao},
+	pages = {739-767},
+	openreview = {bImlLT3r62},
+	abstract = {In this paper, we analyze the computational limitations of Mamba and State-space Models (SSMs) by using the circuit complexity framework. Despite Mamba's stateful design and recent attention as a strong candidate to outperform Transformers, we have demonstrated that both Mamba and SSMs with $\mathrm{poly}(n)$-precision and constant-depth layers reside within the $\mathsf{DLOGTIME}$-uniform $\mathsf{TC}^0$ complexity class. This result indicates Mamba has the same computational capabilities as Transformer theoretically, and it cannot solve problems like arithmetic formula problems, boolean formula value problems, and permutation composition problems if $\mathsf{TC}^0 \neq \mathsf{NC}^1$. Therefore, it challenges the assumption Mamba is more computationally expressive than Transformers. Our contributions include rigorous proofs showing that Selective SSM and Mamba architectures can be simulated by $\mathsf{DLOGTIME}$-uniform $\mathsf{TC}^0$ circuits, and they cannot solve problems outside $\mathsf{TC}^0$.}
+}
+
+@InProceedings{wang25c,
+	title = {Grouped Sequential Optimization Strategy - the Application of Hyperparameter Importance Assessment in Deep Learning},
+	author = {Wang, Ruinan and Nabney, Ian T. and GOLBABAEE, MOHAMMAD},
+	pages = {768-779},
+	openreview = {YIhDWlfQsH},
+	abstract = {Hyperparameter optimization (HPO) is a critical component of machine learning pipelines, significantly affecting model robustness, stability, and generalization. However, HPO is often a time-consuming and computationally intensive task. Traditional HPO methods, such as grid search and random search, often suffer from inefficiency. Bayesian optimization, while more efficient, still struggles with high-dimensional search spaces. In this paper, we contribute to the field by exploring how insights gained from hyperparameter importance assessment (HIA) can be leveraged to accelerate HPO, reducing both time and computational resources. Building on prior work that quantified hyperparameter importance by evaluating 10 hyperparameters on CNNs using 10 common image classification datasets, we implement a novel HPO strategy called 'Sequential Grouping.' That prior work assessed the importance weights of the investigated hyperparameters based on their influence on model performance, providing valuable insights that we leverage to optimize our HPO process. Our experiments, validated across six additional image classification datasets, demonstrate that incorporating hyperparameter importance assessment (HIA) can significantly accelerate HPO without compromising model performance, reducing optimization time by an average of 31.9\% compared to the conventional simultaneous strategy.}
+}
+
+@InProceedings{han25,
+	title = {You Only Debias Once: Towards Flexible Accuracy-Fairness Trade-offs at Inference Time},
+	author = {Han, Xiaotian and Chen, Tianlong and Zhou, Kaixiong and Jiang, Zhimeng and Wang, Zhangyang and Hu, Xia},
+	pages = {780-809},
+	openreview = {XYMWd1wNlf},
+	abstract = {Deep neural networks are prone to various bias issues, jeopardizing their applications for high-stake decision-making. Existing fairness methods typically offer a fixed accuracy-fairness trade-off, since the weight of the well-trained model is a fixed point (fairness-optimum) in the weight space. Nevertheless, more flexible accuracy-fairness trade-offs at inference time are practically desired since: 1) stakes of the same downstream task can vary for different individuals, and 2) different regions have diverse laws or regularization for fairness. If using the previous fairness methods, we have to train multiple models, each offering a specific level of accuracy-fairness trade-off. This is often computationally expensive, time-consuming, and difficult to deploy, making it less practical for real-world applications. To address this problem, we propose You Only Debias Once (YODO) to achieve in-situ flexible accuracy-fairness trade-offs at inference time, using a single model that trained only once. Instead of pursuing one individual fixed point (fairness-optimum) in the weight space, we aim to find a ''line'' in the weight space that connects the accuracy-optimum and fairness-optimum points using a single model. Points (models) on this line implement varying levels of accuracy-fairness trade-offs. At inference time, by manually selecting the specific position of the learned ``line'', our proposed method can achieve arbitrary accuracy-fairness trade-offs for different end-users and scenarios. Experimental results on tabular and image datasets show that YODO achieves flexible trade-offs between model accuracy and fairness, at ultra-low overheads. For example, if we need $100$ levels of trade-off on the \acse dataset, YODO takes $3.53$ seconds while training $100$ fixed models consumes $425$ seconds. The code is available at https://github.com/ahxt/yodo.}
+}
+
+@InProceedings{bai25,
+	title = {Improving Neuron-level Interpretability with White-box Language Models},
+	author = {Bai, Hao and Ma, Yi},
+	pages = {810-836},
+	openreview = {XPpbo0zC4Y},
+	abstract = {Neurons in auto-regressive language models like GPT-2 can be interpreted by analyzing their activation patterns. Recent studies have shown that techniques such as dictionary learning, a form of post-hoc sparse coding, enhance this neuron-level interpretability. In our research, we are driven by the goal to fundamentally improve neural network interpretability by embedding sparse coding directly within the model architecture, rather than applying it as an afterthought. In our study, we introduce a white-box transformer-like architecture named Coding RAte TransformEr (CRATE), explicitly engineered to capture sparse, low-dimensional structures within data distributions. Our comprehensive experiments showcase significant improvements (up to 103% relative improvement) in neuron-level interpretability across a variety of evaluation metrics. Detailed investigations confirm that this enhanced interpretability is steady across different layers irrespective of the model size, underlining CRATE's robust performance in enhancing neural network interpretability. Further analysis shows that CRATE's increased interpretability comes from its enhanced ability to consistently and distinctively activate on relevant tokens. These findings point towards a promising direction for creating white-box foundation models that excel in neuron-level interpretation.}
+}
+
+@InProceedings{quiroga25,
+	title = {Quantum EigenGame for excited state calculation},
+	author = {Quiroga, David A. and Han, Jason and Kyrillidis, Anastasios},
+	pages = {837-864},
+	openreview = {XFjwzut6c5},
+	abstract = {Computing the excited states of a given Hamiltonian is computationally hard for large systems, but methods that do so using quantum computers scale tractably. This problem is equivalent to the PCA problem where we are interested in decomposing a matrix into a collection of principal components. Classically, PCA is a well-studied problem setting, for which both centralized and distributed approaches have been developed. On the distributed side, one recent approach is that of EigenGame, a game-theoretic approach to finding eigenvectors where each eigenvector reaches a Nash equilibrium either sequentially or in parallel.  With this work, we extend the EigenGame algorithm for both a $0^\text{th}$-order approach and for quantum computers, and harness the framework that quantum computing provides in computing excited states. Results show that using the Quantum EigenGame allows us to converge to excited states of a given Hamiltonian without the need of a deflation step. We also develop theory on error accumulation for finite-differences and parameterized approaches.}
+}
+
+@InProceedings{schmolli25,
+	title = {Adversarially Robust Spiking Neural Networks with Sparse Connectivity},
+	author = {Schmolli, Mathias and Baronig, Maximilian and Legenstein, Robert and Ozdenizci, Ozan},
+	pages = {865-883},
+	openreview = {VhCOSdgFl2},
+	abstract = {Deployment of deep neural networks in resource-constrained embedded systems requires innovative algorithmic solutions to facilitate their energy and memory efficiency. To further ensure the reliability of these systems against malicious actors, recent works have extensively studied adversarial robustness of existing architectures. Our work focuses on the intersection of adversarial robustness, memory- and energy-efficiency in neural networks. We introduce a neural network conversion algorithm designed to produce sparse and adversarially robust spiking neural networks (SNNs) by leveraging the sparse connectivity and weights from a robustly pretrained artificial neural network (ANN). Our approach combines the energy-efficient architecture of SNNs with a novel conversion algorithm, leading to state-of-the-art performance with enhanced energy and memory efficiency through sparse connectivity and activations. Our models are shown to achieve up to 100x reduction in the number of weights to be stored in memory, with an estimated 8.6x increase in energy efficiency compared to dense SNNs, while maintaining high performance and robustness against adversarial threats.}
+}
+
+@InProceedings{wang25d,
+	title = {Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization},
+	author = {WANG, DONGWEI and Yang, Huanrui},
+	pages = {884-896},
+	openreview = {VehapTAftQ},
+	abstract = {Quantization is a critical step to enable efficient LLM serving under limited resource. However, previous research observes that certain weights in the LLM, known as outliers, are significantly sensitive to quantization noises. Existing quantization methods leave these outliers as floating points or higher precisions to retain performance, posting challenges on the efficient hardware deployment of the mixed-precision model. This work investigates an alternative way to tame the sensitive weights' impact on the quantization error, by reducing the loss Hessian trace with respect to outliers through an efficient fine-tuning process. We propose Noise Perturbation Fine-tuning (NPFT), which identifies outlier weights and add random weight perturbations on the outliers as the model going through a PEFT optimization. NPFT tames the sensitivity of outlier weights so that the quantized model performance can be improved without special treatment to the outliers. When applied to OPT and LLaMA models, our NPFT method achieves stable performance improvements for both uniform and non-uniform quantizers, while also offering better inference efficiency. Notably, the simplest RTN can achieve performance on par with GPTQ using our NPFT on LLaMA2-7B-4bits benchmark.}
+}
+
+@InProceedings{pan25,
+	title = {RecCrysFormer: Refined Protein Structural Prediction from 3D Patterson Maps via Recycling Training Runs},
+	author = {Pan, Tom and Dramko, Evan and Miller, Mitchell D. and Jr., George N Phillips and Kyrillidis, Anastasios},
+	pages = {897-912},
+	openreview = {U9DhMKzXPT},
+	abstract = {Determining protein structures at an atomic level remains a significant challenge in structural biology. We introduce $\texttt{RecCrysFormer}$, a hybrid model that exploits the strengths of transformers with the aim of integrating experimental and ML approaches to protein structure determination from crystallographic data. $\texttt{RecCrysFormer}$ leverages Patterson maps and incorporates known standardized partial structures of amino acid residues to directly predict electron density maps, which are essential for constructing detailed atomic models through crystallographic refinement processes. $\texttt{RecCrysFormer}$ benefits from a ``recycling'' training regimen that iteratively incorporates results from crystallographic refinements and previous training runs as additional inputs in the form of template maps. Using a preliminary dataset of synthetic peptide fragments based on Protein Data Bank, $\texttt{RecCrysFormer}$ achieves good accuracy in structural predictions and shows robustness against variations in crystal parameters, such as unit cell dimensions and angles.}
+}
+
+@InProceedings{gao25,
+	title = {Learning Effective Dynamics across Spatio-Temporal Scales of Complex Flows},
+	author = {Gao, Han and Kaltenbach, Sebastian and Koumoutsakos, Petros},
+	pages = {913-931},
+	openreview = {TU9e5yChcU},
+	abstract = {Modeling and simulation of complex fluid flows with dynamics that span multiple spatio-temporal scales is a fundamental challenge in many scientific and engineering domains. Full-scale resolving simulations for systems such as highly turbulent flows are not feasible in the foreseeable future, and reduced-order models must capture dynamics that involve interactions across scales. In the present work, we propose a novel framework, Graph-based Learning of Effective Dynamics (Graph-LED), that leverages graph neural networks (GNNs), as well as an attention-based autoregressive model, to extract the effective dynamics from a small amount of simulation data.  GNNs represent flow fields on unstructured meshes as graphs and effectively handle complex geometries and non-uniform grids. The proposed method combines a GNN based, dimensionality reduction for variable-size unstructured meshes with an autoregressive temporal attention model that can learn temporal dependencies automatically. We evaluated the proposed approach on a suite of fluid dynamics problems, including flow past a cylinder and flow over a backward-facing step over a range of Reynolds numbers. The results demonstrate robust and effective forecasting of spatio-temporal physics; in the case of the flow past a cylinder, both small-scale effects that occur close to the cylinder as well as its wake are accurately captured.}
+}
+
+@InProceedings{song25,
+	title = {Fast and Efficient Matching Algorithm with Deadline Instances},
+	author = {Song, Zhao and Wang, Weixin and Yin, Chenbo and Yin, Junze},
+	pages = {932-959},
+	openreview = {TIneXGrWZt},
+	abstract = {The online weighted matching problem is a fundamental problem in machine learning due to its numerous applications.  Despite many efforts in this area, existing algorithms are either too slow or don't take $\mathrm{deadline}$ (the longest time a node can be matched) into account. In this paper, we introduce a market model with $\mathrm{deadline}$ first. Next, we present our two optimized algorithms (\textsc{FastGreedy} and \textsc{FastPostponedGreedy}) and offer theoretical proof of the time complexity and correctness of our algorithms. In \textsc{FastGreedy} algorithm, we have already known if a node is a buyer or a seller. But in \textsc{FastPostponedGreedy} algorithm, the status of each node is unknown at first. Then, we generalize a sketching matrix to run the original and our algorithms on both real data sets and synthetic data sets.  Let $\epsilon \in (0,0.1)$ denote the relative error of the real weight of each edge. The competitive ratio of original \textsc{Greedy} and \textsc{PostponedGreedy} is $\frac{1}{2}$ and $\frac{1}{4}$ respectively. Based on these two original algorithms, we proposed \textsc{FastGreedy} and \textsc{FastPostponedGreedy} algorithms and the competitive ratio of them is $\frac{1 -  \epsilon}{2}$ and $\frac{1 -  \epsilon}{4}$ respectively. At the same time, our algorithms run faster than the original two algorithms. Given $n$ nodes in $\mathbb{R} ^ d$, we decrease the time complexity from $O(nd)$ to  $\widetilde{O}(\epsilon^{-2} \cdot (n + d))$.}
+}
+
+@InProceedings{bassewitz25,
+	title = {Closure Discovery for Coarse-Grained Partial Differential Equations Using Grid-based Reinforcement Learning},
+	author = {Bassewitz, Jan-Philipp von and Kaltenbach, Sebastian and Koumoutsakos, Petros},
+	pages = {960-984},
+	openreview = {Pve4Pg0A1v},
+	abstract = {Reliable predictions of critical phenomena, such as weather, wildfires and  epidemics often rely  on models described by Partial Differential Equations (PDEs). However, simulations that capture the full range of spatio-temporal scales described by such PDEs are often prohibitively expensive. Consequently, coarse-grained simulations  are usually deployed that adopt various  heuristics and empirical closure terms to account for the missing information. We propose a novel and systematic approach for identifying closures in under-resolved PDEs using grid-based Reinforcement Learning. This formulation incorporates inductive bias and exploits locality by deploying a central policy represented efficiently by a Fully Convolutional Network (FCN). 
+We demonstrate the capabilities and limitations of our framework through numerical solutions of the advection equation and the Burgers' equation. Our results show accurate predictions for in- and out-of-distribution test cases as well as a significant speedup compared to resolving all scales.}
+}
+
+@InProceedings{feng25,
+	title = {FedOSAA: Improving Federated Learning with One-Step Anderson Acceleration},
+	author = {Feng, Xue and Laiu, M. Paul and Strohmer, Thomas},
+	pages = {985-1006},
+	openreview = {OoYcaWhfwB},
+	abstract = {Federated learning (FL) is a distributed machine learning approach that enables multiple local clients and a central server to collaboratively train a model while keeping the data on their own devices. First-order methods, particularly those incorporating variance reduction techniques, are the most widely used FL algorithms due to their simple implementation and stable performance. However, these methods tend to be slow and require a large number of communication rounds to reach the global minimizer. We propose FedOSAA, a novel approach that preserves the simplicity of first-order methods while achieving the rapid convergence typically associated with second-order methods. Our approach applies one Anderson acceleration (AA) step following classical local updates based on first-order methods with variance reduction, such as FedSVRG and SCAFFOLD, during local training. This AA step is able to leverage curvature information from the history points and gives a new update that approximates the Newton-GMRES direction, thereby significantly improving the convergence. We establish a local linear convergence rate to the global minimizer of FedOSAA for smooth and strongly convex loss functions.  Numerical comparisons show that FedOSAA substantially improves the communication and computation efficiency of the original first-order methods, achieving performance comparable to second-order methods like GIANT.}
+}
+
+@InProceedings{chen25c,
+	title = {Enhancing Video Representation Learning with Temporal Differentiation},
+	author = {Chen, Siyi and Choi, Minkyu and Zhao, Zesen and Han, Kuan and Qu, Qing and Liu, Zhongming},
+	pages = {1007-1034},
+	openreview = {NgR6hYd3Xw},
+	abstract = {Taking inspiration from physical motion, we present a new self-supervised dynamics learning strategy for videos: **Vi**deo Time-**Di**fferentiation for Instance **Di**scrimination (ViDiDi). ViDiDi is a simple and data-efficient strategy, readily applicable to existing self-supervised video representation learning frameworks based on instance discrimination. At its core, ViDiDi observes different aspects of a video through various orders of temporal derivatives of its frame sequence. These derivatives, along with the original frames, support the Taylor series expansion of the underlying continuous dynamics at discrete times, where higher-order derivatives emphasize higher-order motion features. ViDiDi learns a single neural network that encodes a video and its temporal derivatives into consistent embeddings following a balanced alternating learning algorithm. By learning consistent representations for original frames and derivatives, the encoder is steered to emphasize motion features over static backgrounds and uncover the hidden dynamics in original frames. Hence, video representations are better separated by dynamic features. We integrate ViDiDi into existing instance discrimination frameworks (VICReg, BYOL, and SimCLR) for pretraining on UCF101 or Kinetics and test on standard benchmarks including video retrieval, action recognition, and action detection. The performances are enhanced by a significant margin without the need for large models or extensive datasets.}
+}
+
+@InProceedings{zhang25,
+	title = {Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients},
+	author = {Zhang, Zhenyu and JAISWAL, AJAY KUMAR and Yin, Lu and Liu, Shiwei and Zhao, Jiawei and Tian, Yuandong and Wang, Zhangyang},
+	pages = {1035-1050},
+	openreview = {KTAPk6c2hl},
+	abstract = {Training Large Language Models (LLMs) is memory-intensive due to the large number of parameters and associated optimization states. GaLore, a recent method, reduces memory usage by projecting weight gradients into a low-rank subspace without compromising performance. However, GaLore relies on time-consuming Singular Value Decomposition (SVD) operations to identify the subspace, and the frequent subspace updates lead to significant training time overhead. Moreover, GaLore offers minimal improvements in accuracy and efficiency compared to LoRA in more accessible fine-tuning scenarios. To address these limitations, we introduce Q-GaLore, a novel approach that substantially reduces memory usage by combining quantization and low-rank projection, surpassing the benefits of GaLore. Our method is based on two key observations: (i) the gradient subspace exhibits diverse properties, with some layers converging early in training while others are subject to frequent changes; (ii) the projection matrices are highly resilient to low-bit quantization. Leveraging these insights, Q-GaLore adaptively updates the gradient subspace based on its convergence statistics, achieving comparable performance while significantly reducing the number of SVD operations. We maintain the projection matrices in INT4 format for aggressive memory conservation and preserve weights in INT8 format, incorporating stochastic rounding to capture accumulated gradient information. This approach enables a high-precision training trajectory using only low-precision weights. We demonstrate that Q-GaLore achieves highly competitive pre-training and fine-tuning performance with exceptional memory efficiency. At pre-training, Q-GaLore facilitates training a LLaMA-7B model from scratch on a single NVIDIA RTX 4060 Ti with only 16 GB memory, showcasing its exceptional memory efficiency and practicality. At fine-tuning, it reduces memory consumption by up to 50% compared to LoRA and GaLore, while consistently outperforming QLoRA (by up to 5.19 on MMLU) at the same memory cost.}
+}
+
+@InProceedings{qu25,
+	title = {Vanishing Feature: Diagnosing Model Merging and Beyond},
+	author = {Qu, Xingyu and Horv\'{a}th, Samuel},
+	pages = {1051-1086},
+	openreview = {KBSh5ChQIo},
+	abstract = {Model merging offers an efficient way to combine pre-trained neural networks but often suffers from inconsistent performance, especially when merging models with different initializations. We identify the ''vanishing feature'' phenomenon, where input-induced features diminish during propagation through the merged model, degrading performance. Through theoretical and empirical analysis, we reveal that this phenomenon underpins challenges like variance collapse and explains techniques like permutation-based merging, post-merging normalization, etc. We show that existing normalization strategies can be enhanced by precisely targeting the vanishing feature issue. Leveraging these insights, we propose the ''Preserve-First Merging'' (PFM) strategy, which preserves early-layer features, enabling merged VGG16 models on CIFAR-10 to surpass the original models without post-training for the first time.
+Furthermore, we demonstrate that the vanishing feature phenomenon extends to other contexts, such as model pruning. Applying post-pruning normalization to mitigate the issue significantly improves one-shot pruning performance at high sparsity, offering a simple and effective post-pruning solution. The code is available at https://github.com/XingyuQu/VF.}
+}
+
+@InProceedings{huang25,
+	title = {Exact and Rich Feature Learning Dynamics of Two-Layer Linear Networks},
+	author = {Huang, Wei and Chen, Wuyang and xu, zhiqiang and Wang, Zhangyang and Suzuki, Taiji},
+	pages = {1087-1111},
+	openreview = {J7dZuX0DGI},
+	abstract = {Deep neural networks exhibit rich training dynamics under gradient descent updates. The root of this phenomenon is the non-convex optimization of deep neural networks, which is extensively studied in recent theory works. However, previous works did not consider or only considered a few gradient descent steps under non-asymptotic manner, resulting in an incomplete characterization of the network's stage-wise learning behavior and the evolutionary trajectory of its parameters and outputs. In this work, we characterize how a network's feature learning happens during training in a regression setting. We analyze the dynamics of two quantities of a two-layer linear network: the projection of the first layer's weights onto the feature vector, and the weights in the second layer. The former indicates how well the network fits the feature vector from the input data, and the latter stands for the magnitude learned by the network. More importantly, by formulating the dynamics of these two quantities into a non-linear system, we give the precise characterization of the training trajectory, demonstrating the rich feature learning dynamics in the linear neural network. Moreover, we establish a connection between the feature learning dynamics and the neural tangent kernel, illustrating the presence of feature learning beyond lazy training. Experimental simulations corroborate our theoretical findings, confirming the validity of our proposed conclusion.}
+}
+
+@InProceedings{peng25,
+	title = {Sparse MoE as a New Treatment: Addressing Forgetting, Fitting, Learning Issues in Multi-Modal Multi-Task Learning},
+	author = {Peng, Jie and Yun, Sukwon and Zhou, Kaixiong and Zhou, Ruida and Hartvigsen, Thomas and Zhang, Yanyong and Wang, Zhangyang and Chen, Tianlong},
+	pages = {1112-1145},
+	openreview = {IFfyezixou},
+	abstract = {Sparse Mixture-of-Experts (SMoE) is a promising paradigm that can be easily tailored for multi-task learning. Its conditional computing nature allows us to organically allocate relevant parts of a model for performant and efficient predictions. However, several under-explored pain points persist, especially when considering scenarios with both multiple modalities and tasks: 1. $\textit{{Modality Forgetting Issue.}}$ Diverse modalities may prefer conflicting optimization directions, resulting in ineffective learning or knowledge forgetting; 2. $\textit{{Modality Fitting Issue.}}$ Current SMoE pipelines select a fixed number of experts for all modalities, which can end up over-fitting to simpler modalities or under-fitting complex modalities; 3. $\textit{{Heterogeneous Learning Pace.}}$ The varied modality attributes, task resources, and objectives usually lead to distinct optimization difficulties and convergence. Given these issues, there is a clear need for a systematic approach to harmonizing multi-modal and multi-task objectives when using SMoE. We aim to address these pain points and propose a new $\underline{S}$parse $\underline{M}$oE for $\underline{M}$ulti-$\underline{M}$odal $\underline{M}$ulti-task learning, $\textit{a.k.a.}$, $\texttt{SM$^4$}$, which ($1$) disentangles model spaces for different modalities to mitigate their optimization conflicts; 
+($2$) automatically determines the modality-specific model size to improve fitting; and ($3$) synchronizes the learning paces of disparate modalities and tasks based on training dynamics in SMoE like the entropy of routing decisions. Comprehensive experiments validate the effectiveness of $\texttt{SM$^4$}$, which outperforms previous state-of-the-art across $3$ task groups and $11$ different modalities with a clear performance margin ($\textit{e.g.}$, $\ge 1.37\%$) and a substantial computation reduction ($46.49\% \sim 98.62\%$). Codes are in supplement.}
+}
+
+@InProceedings{liu25c,
+	title = {AgentHPO: Large Language Model Agent for  Hyper-Parameter Optimization},
+	author = {Liu, Siyi and Gao, Chen and Li, Yong},
+	pages = {1146-1169},
+	openreview = {HU3yfXcoKU},
+	abstract = {Hyperparameter optimization is critical in modern machine learning, requiring
+ expert knowledge, numerous trials, and high computational and human resources.
+ Despite the advancements in Automated Machine Learning (AutoML), challenges
+ in terms of trial efficiency, setup complexity, and interoperability still persist. To
+ address these issues, we introduce a novel paradigm leveraging Large Language
+ Models (LLMs) to automate hyperparameter optimization across diverse machine
+ learning tasks, which is named AgentHPO (short for LLM Agent-based Hyper
+parameter Optimization). Specifically, AgentHPO processes the task information
+ autonomously, conducts experiments with specific hyperparameters (HPs), and
+ iteratively optimizes them based on historical trials. This human-like optimization
+ process largely reduces the number of required trials, simplifies the setup pro
+cess, and enhances interpretability and user trust, compared to traditional AutoML
+ methods. Extensive empirical experiments conducted on 12 representative machine
+learning tasks indicate that AgentHPO not only matches but also often surpasses
+ the best human trials in terms of performance while simultaneously providing
+ explainable results. Further analysis sheds light on the strategies employed by the
+ LLMin optimizing these tasks, highlighting its effectiveness and adaptability in
+ various scenarios.}
+}
+
+@InProceedings{bambhaniya25,
+	title = {Progressive Gradient Flow for Robust N:M Sparsity Training in Transformers},
+	author = {Bambhaniya, Abhimanyu Rajeshkumar and Yazdanbakhsh, Amir and Subramanian, Suvinay and Kao, Sheng-Chun and Agrawal, Shivani and Evci, Utku and Krishna, Tushar},
+	pages = {1170-1190},
+	openreview = {HJjauwys0B},
+	abstract = {N:M Structured sparsity has garnered significant interest as a result of relatively modest overhead and improved efficiency. Additionally, this form of sparsity holds considerable appeal for reducing the memory footprint owing to their modest representation overhead. There have been efforts to develop training recipes for N:M structured sparsity, they primarily focus on low-sparsity regions (50%). Nonetheless, performance of models trained using these approaches tends to decline when confronted with high-sparsity regions (80%). In this work, we study the effectiveness of existing sparse training recipes at high-sparsity regions and argue that these methods fail to sustain the model quality on par with low-sparsity regions. We demonstrate that the significant factor contributing to this disparity is the presence of elevated levels of induced noise in the gradient magnitudes. To mitigate this undesirable effect, we employ decay mechanisms to progressively restrict the flow of gradients towards pruned elements. Our approach improves the model quality by up to 2% and 5% in vision and language models at high sparsity regime, respectively. We also evaluate the trade-off between model accuracy and training compute cost in terms of FLOPs. At iso-training FLOPs, our method performs better than conventional sparse training recipes, exhibiting an accuracy improvement of up to 2%.}
+}
+
+@InProceedings{bharti25,
+	title = {Sufficient and Necessary Explanations (and What Lies in Between)},
+	author = {Bharti, Beepul and Yi, Paul and Sulam, Jeremias},
+	pages = {1191-1215},
+	openreview = {H43BmpeJII},
+	abstract = {As complex machine learning models continue to be used in high-stakes decision settings, understanding their predictions is crucial. Post-hoc explanation methods aim to identify which features of an input $x$ are important to a model's prediction $f({\bf x})$. However, explanations often vary between methods and lack clarity, limiting the information we can draw from them. To address this, we formalize two precise concepts---*sufficiency* and *necessity*---to quantify how features contribute to a model's prediction. We demonstrate that, although intuitive and simple, these two types of explanations may fail to fully reveal which features a model deems important. To overcome this, we propose and study a unified notion of importance that spans the entire sufficiency-necessity axis. Our unified notion, we show, has strong ties to notions of importance based on conditional independence and Shapley values. Lastly, through various experiments, we quantify the sufficiency and necessity of popular post-hoc explanation methods. Furthermore, we show that generating explanations along the sufficiency-necessity axis can uncover important features that may otherwise be missed, providing new insights into feature importance.}
+}
+
+@InProceedings{deng25,
+	title = {Streaming Kernel PCA Algorithm With Small Space},
+	author = {Deng, Yichuan and Long, Jiangxuan and Song, Zhao and Wang, Zifan and Zhang, Han},
+	pages = {1216-1254},
+	openreview = {Gfl6APFUri},
+	abstract = {Principal Component Analysis (PCA) is a widely used technique in machine learning, data analysis, and signal processing. With the increase in the size and complexity of datasets, it has become essential to develop low-space usage algorithms for PCA. Streaming PCA has gained significant attention in recent years, as it can handle large datasets efficiently. The kernel method, commonly used in learning algorithms such as Support Vector Machines (SVMs), has also been applied in PCA algorithms.
+
+We propose a streaming algorithm for Kernel PCA problems based on the traditional scheme by Oja. Our algorithm addresses the challenge of reducing the memory usage of PCA while maintaining its accuracy. 
+We analyze the performance of our algorithm by studying the conditions under which it succeeds. 
+Specifically, we show that when the spectral ratio $R:= \lambda_1/\lambda_2$ of the target covariance matrix is $\Omega( \log n\cdot \log d)$, the streaming PCA can be solved with linear space cost. However, the standard PCA algorithm usually requires quadratic space due to matrix vector multiplication.
+
+Our proposed algorithm has several advantages over existing methods. First, it is a streaming algorithm that can handle large datasets efficiently. Second, it employs the kernel method, which allows it to capture complex nonlinear relationships among data points. Third, it has a low-space usage, making it suitable for limited memory applications.}
+}
+
+@InProceedings{jacot25,
+	title = {Hamiltonian Mechanics of Feature Learning: Bottleneck Structure in Leaky ResNets},
+	author = {Jacot, Arthur and Kaiser, Alexandre},
+	pages = {1255-1273},
+	openreview = {C8OsIiVcyC},
+	abstract = {We study Leaky ResNets, which interpolate between ResNets
+and Fully-Connected nets depending on an 'effective
+depth' hyper-parameter $\tilde{L}$. In the infinite depth limit,
+we study 'representation geodesics' $A_{p}$: continuous paths in
+representation space (similar to NeuralODEs) from input $p=0$ to
+output $p=1$ that minimize the parameter norm of the network. We
+give a Lagrangian and Hamiltonian reformulation, which highlight the
+importance of two terms: a kinetic energy which favors small layer
+derivatives $\partial_{p}A_{p}$ and a potential energy that favors
+low-dimensional representations, as measured by the 'Cost of Identity'.
+The balance between these two forces offers an intuitive understanding
+of feature learning in ResNets. We leverage this intuition to explain
+the emergence of a bottleneck structure, as observed in previous work:
+for large $\tilde{L}$ the potential energy dominates and leads to
+a separation of timescales, where the representation jumps rapidly
+from the high dimensional inputs to a low-dimensional representation,
+move slowly inside the space of low-dimensional representations, before
+jumping back to the potentially high-dimensional outputs. Inspired
+by this phenomenon, we train with an adaptive layer step-size
+to adapt to the separation of timescales.}
+}
+
+@InProceedings{redman25,
+	title = {How Iterative Magnitude Pruning Discovers Local Receptive Fields in Fully Connected Neural Networks},
+	author = {Redman, William T and Wang, Zhangyang and Ingrosso, Alessandro and Goldt, Sebastian},
+	pages = {1274-1291},
+	openreview = {B936pXBrz5},
+	abstract = {Since its use in the Lottery Ticket Hypothesis, iterative magnitude pruning (IMP) has become a popular method for extracting sparse subnetworks that can be trained to high performance. Despite its success, the mechanism that drives the success of IMP remains unclear. One possibility is that IMP is capable of extracting subnetworks with good inductive biases that facilitate performance. Supporting this idea, recent work showed that applying IMP to fully connected neural networks (FCNs) leads to the emergence of local receptive fields (RFs), a feature of mammalian visual cortex and convolutional neural networks that facilitates image processing. However, it remains unclear why IMP would uncover localised features in the first place. Inspired by results showing that training on synthetic images with highly non-Gaussian statistics (e.g., sharp edges) is sufficient to drive the emergence of local RFs in FCNs, we hypothesize that IMP iteratively increases the non-Gaussian statistics of FCN representations, creating a feedback loop that enhances localization. Here, we demonstrate first that non-Gaussian input statistics are indeed necessary for IMP to discover localized RFs. We then develop a new method for measuring the effect of individual weights on the statistics of the FCN representations ("cavity method"), which allows us to show that IMP systematically increases the non-Gaussianity of pre-activations, leading to the formation of localised RFs. Our work, which is the first to study the effect of IMP on the statistics of the representations of neural networks, sheds parsimonious light on one way in which IMP can drive the formation of strong inductive biases.}
+}
+
+@InProceedings{zheng25,
+	title = {White-box Error Correction Code Transformer},
+	author = {Zheng, Ziyan and Lau, Chin Wa and Guo, Nian and Shi, Xiang and Huang, Shao-Lun},
+	pages = {1292-1306},
+	openreview = {6lfnSzJ5qE},
+	abstract = {Error correcting codes (ECCs) play a crucial role in modern communication systems by ensuring reliable data transmission over noisy channels. While traditional algorithms based on belief propagation suffer from limited decoding performance, transformer-based approaches have emerged as powerful solutions for ECC decoding. However, the internal mechanisms of transformer-based approaches remain largely unexplained, making it challenging to understand and improve their performance. In this paper, we propose a White-box Error Correction Code Transformer (WECCT) that provides theoretical insights into transformer-based decoding. By formulating the decoding problem from a sparse rate reduction perspective and introducing a novel Multi-head Tanner-subspaces Self Attention mechanism, our approach provides a parameter-efficient and theoretically principled framework for understanding transformer-based decoding. Extensive experiments across various code families demonstrate that this interpretable design achieves competitive performance compared to state-of-the-art decoders.}
+}
+
+@InProceedings{zhou25,
+	title = {Are all layers created equal: A neural collapse perspective},
+	author = {Zhou, Jinxin and Jiang, Jiachen and Zhu, Zhihui},
+	pages = {1307-1327},
+	openreview = {5eHpefiK8W},
+	abstract = {Understanding how features evolve layer by layer is crucial for uncovering the inner workings of deep neural networks. \textit{Progressive neural collapse}, where successive layers increasingly compress within-class features and enhance class separation, has been primarily studied empirically in small architectures on simple tasks or theoretically within linear network contexts. However, its behavior in larger architectures and complex datasets remains underexplored. In this work, we extend the study of progressive neural collapse to larger models and more complex datasets, including clean and noisy data settings, offering a comprehensive understanding of its role in generalization and robustness. Our findings reveal three key insights:1. Layer inequality: Deeper layers significantly enhance neural collapse and play a vital role in generalization but are also more susceptible to memorization. 2. Depth-dependent behavior: In deeper models, middle layers contribute minimally due to a diminished neural collapse enhancement leading to redundancy and limited generalization improvements, which validates the effectiveness of layer pruning. 3. Architectural differences: Transformer models outperform convolutional models in enhancing neural collapse on larger datasets and exhibit greater robustness to memorization, with deeper Transformers reducing memorization while deeper convolutional models show the opposite trend. These findings provide new insights into the hierarchical roles of layers and their interplay with architectural design, shedding light on how deep neural networks process data and generalize across challenging conditions.}
+}
+
+@InProceedings{almansoori25,
+	title = {Collaborative and Efficient Personalization with Mixtures of Adaptors},
+	author = {Almansoori, Abdulla Jasem and Horv\'{a}th, Samuel and Tak\'{a}\v{c}, Martin},
+	pages = {1328-1364},
+	openreview = {3J6AXM2HfN},
+	abstract = {Heterogenous data is prevalent in real-world federated learning. We propose a parameter-efficient framework, Federated Low-Rank Adaptive Learning (FLoRAL), that allows clients to personalize in groups by mixing between low-rank adaptors, where the mixtures are client-specific. FLoRAL is a model parameterization that casts personalized federated learning as a multi-task learning problem, with weight sharing as an implicit regularizer. It is memory-efficient, as the personalized parameters (i.e., base model + adaptors) are all federated. Our results show that FLoRAL can generalize better than a mixture of full models when data are scarce. It can also consistently personalize better than models with a locally tuned adaptor per client. This demonstrates the benefits of "federated personalization" and its robustness against overfitting. We derive the convergence rates and show theoretically that FLoRAL can lead to better variance reduction of the base model's gradients.}
+}
+
+@InProceedings{yaras25,
+	title = {Explaining and Mitigating the Modality Gap in Contrastive Multimodal Learning},
+	author = {Yaras, Can and Chen, Siyi and Wang, Peng and Qu, Qing},
+	pages = {1365-1387},
+	openreview = {2sThreW73a},
+	abstract = {Multimodal learning has recently gained significant popularity, demonstrating impressive performance across various zero-shot classification tasks and a range of perceptive and generative applications. Models such as Contrastive Language--Image Pretraining (CLIP) are designed to bridge different modalities, such as images and text, by learning a shared representation space through contrastive learning. Despite their success, the working mechanisms of multimodal learning remain poorly understood. Notably, these models often exhibit a \emph{modality gap}, where different modalities occupy distinct regions within the shared representation space. In this work, we conduct an in-depth analysis of the emergence of modality gap by characterizing the gradient flow learning dynamics. Specifically, we identify the critical roles of mismatched data pairs and a learnable temperature parameter in causing and perpetuating the modality gap during training. Furthermore, our theoretical insights are validated through experiments on practical CLIP models. These findings provide principled guidance for mitigating the modality gap, including strategies such as appropriate temperature scheduling and modality swapping. Additionally, we demonstrate that closing the modality gap leads to improved performance on tasks such as image-text retrieval.}
+}
+
+@InProceedings{galanti25,
+	title = {SGD with Weight Decay Secretly Minimizes the Ranks of Your Neural Networks},
+	author = {Galanti, Tomer and Siegel, Zachary S and Gupte, Aparna and Poggio, Tomaso A},
+	pages = {1388-1412},
+	openreview = {0LzE9AROwD},
+	abstract = {We explore the implicit bias of Stochastic Gradient Descent (SGD) toward learning low-rank weight matrices during the training of deep neural networks. Through theoretical analysis and empirical validation, we demonstrate that this rank-minimizing bias becomes more pronounced with smaller batch sizes, higher learning rates, or stronger weight decay. Unlike previous studies, our analysis does not rely on restrictive assumptions about data, convergence, optimality of the learned weight matrices, network architecture, making it applicable to a wide range of neural network architectures of any width or depth. We further show that weight decay is essential for inducing this low-rank bias. Finally, we empirically explore the connection between this bias and generalization, finding that it has a noticeable, yet marginal, effect on the test performance.}
+}
+
+@InProceedings{duan25,
+	title = {Towards Vector Optimization on Low-Dimensional Vector Symbolic Architecture},
+	author = {Duan, Shijin and Liu, Yejia and Liu, Gaowen and Kompella, Ramana Rao and Ren, Shaolei and Xu, Xiaolin},
+	pages = {1413-1432},
+	openreview = {08PRND19BY},
+	abstract = {Vector Symbolic Architecture (VSA) is emerging in machine learning due to its efficiency, but they are hindered by issues of hyperdimensionality and accuracy. As a promising mitigation, the Low-Dimensional Computing (LDC) method significantly reduces the vector dimension by $\sim$100 times while maintaining accuracy, by employing a gradient-based optimization.  Despite its potential, LDC optimization for VSA is still underexplored. Our investigation into vector updates underscores the importance of stable, adaptive dynamics in LDC training. We also reveal the overlooked yet critical roles of batch normalization (BN) and knowledge distillation (KD) in standard approaches. Besides the accuracy boost, BN does not add computational overhead during inference, and KD significantly enhances inference confidence. Through extensive experiments and ablation studies across multiple benchmarks, we provide a thorough evaluation of our approach and extend the interpretability of binary neural network optimization similar to LDC, previously unaddressed in BNN literature.}
+}
+
