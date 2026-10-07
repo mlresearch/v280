@@ -3,7 +3,7 @@ booktitle: Conference on Parsimony and Learning
 shortname: CPAL
 volume: '280'
 year: '2025'
-start: &1 2025-03-24
+start: 2025-03-24
 end: 2025-03-27
 published: 2025-06-15
 layout: proceedings
@@ -84,7 +84,7 @@ conference:
   url: https://cpal.cc
   location: Stanford University, USA
   dates:
-  - *1
+  - 2025-03-24
   - 2025-03-25
   - 2025-03-26
   - 2025-03-27
